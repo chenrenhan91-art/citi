@@ -15,13 +15,14 @@ export default function PrivacyPage() {
     >
       <h2 className="font-serif text-2xl">What we collect</h2>
       <p>
-        If you check out, email us, or join the newsletter we collect the details you type: name, email, phone, delivery
-        address, and message content. The bag is stored in your browser (local storage) until you clear it. We do not
-        take card numbers on this preview storefront.
+        If you check out, email us, or join the newsletter we collect the details you type: name, email, phone for
+        delivery, delivery address, billing address if different, and message content. The bag is stored in your browser
+        (local storage) until you complete an order or clear it. When you pay, card details are used only to authorise
+        the payment. We keep the last four digits with the order confirmation. We do not store the full card number.
       </p>
       <h2 className="pt-4 font-serif text-2xl">Why we use it</h2>
       <p>
-        To reply to you, to fulfil a future paid order, to send a newsletter you asked for, and to keep records we must
+        To reply to you, to fulfil a paid order, to send a newsletter you asked for, and to keep records we must
         keep under UK tax and consumer law. Legal bases are contract, legitimate interests (running a shop), legal
         obligation, and consent for optional email.
       </p>

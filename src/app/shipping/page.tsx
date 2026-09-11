@@ -44,9 +44,11 @@ export default function ShippingPage() {
       </ul>
       <h2 className="pt-4 font-serif text-2xl">Outside the United Kingdom</h2>
       <p>
-        We ship to most countries. We do not ship to the destinations on our{" "}
-        <Link href="/restricted-destinations">restricted list</Link>. Duties and local taxes may be due on arrival; they
-        are not included in the order total.
+        We ship to most countries. We do not ship to: North Korea, Iran, Iran (Islamic Republic of), Myanmar, Russia,
+        Russian Federation, Syria, Syrian Arab Republic, Cuba, South Sudan, Yemen, Haiti, Venezuela, or Afghanistan.
+        The same list is on <Link href="/restricted-destinations">restricted destinations</Link> and{" "}
+        <Link href="/help">Help</Link>. Those countries do not appear in checkout. Duties and local taxes may be due on
+        arrival; they are not included in the order total.
       </p>
       <ul className="list-disc space-y-2 pl-5">
         <li>Bedding and bath only: {formatGBP(INTL_BEDDING_FEE)}.</li>

@@ -16,7 +16,7 @@ export default function TermsPage() {
     >
       <h2 className="font-serif text-2xl">1. Who we are</h2>
       <p>
-        The seller is {company.legalName}, {company.addressSingle}. Contact {company.email} or {company.phoneDisplay}.
+        The seller is {company.legalName}, {company.addressSingle}. Contact {company.email}.
         {company.storeName} is our trading name. {company.vatNote}
       </p>
       <h2 className="pt-4 font-serif text-2xl">2. Governing law</h2>
@@ -35,9 +35,9 @@ export default function TermsPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">4. Orders and guest checkout</h2>
       <p>
-        You may shop without creating an account. An order is an offer to buy. We accept it when we send a dispatch
-        confirmation. We may refuse an order if an item is out of stock, a price is obviously wrong, or the delivery
-        address is restricted. This preview storefront does not collect card details or take payment.
+        You may shop without creating an account. An order is an offer to buy. We accept it when payment is authorised
+        and we show an order confirmation. We may refuse an order if an item is out of stock, a price is obviously wrong,
+        or the delivery address is restricted. We accept Visa, Mastercard, and American Express.
       </p>
       <h2 className="pt-4 font-serif text-2xl">5. Prices and currency</h2>
       <p>

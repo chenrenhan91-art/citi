@@ -533,7 +533,7 @@ export const products: Product[] = [
     images: [
       "/images/prod-lantern.jpg",
       "/images/country-japan.jpg",
-      "/images/cat-furniture.jpg",
+      "/images/prod-ceramic-lamp.jpg",
     ],
     variants: [
       { id: "kyo-45", name: "45 cm", price: 11950 },
@@ -586,7 +586,7 @@ export const products: Product[] = [
     images: [
       "/images/prod-alpaca-throw.jpg",
       "/images/country-peru.jpg",
-      "/images/cat-pillows.jpg",
+      "/images/prod-wool-throw.jpg",
     ],
     variants: [{ id: "cusco-throw", name: "130 x 180 cm", price: 14500 }],
     bestseller: true,

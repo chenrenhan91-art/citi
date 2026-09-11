@@ -1,3 +1,5 @@
+import { isRestrictedCountry } from "./embargo";
+
 export type CountryOption = {
   code: string;
   name: string;
@@ -52,15 +54,8 @@ export const countries: CountryOption[] = [
   { code: "ID", name: "Indonesia" },
   { code: "PH", name: "Philippines" },
   { code: "VN", name: "Vietnam" },
-  { code: "KP", name: "North Korea" },
-  { code: "IR", name: "Iran (Islamic Republic of)" },
-  { code: "MM", name: "Myanmar" },
-  { code: "RU", name: "Russia (Russian Federation)" },
-  { code: "SY", name: "Syria (Syrian Arab Republic)" },
-  { code: "CU", name: "Cuba" },
-  { code: "SS", name: "South Sudan" },
-  { code: "YE", name: "Yemen" },
-  { code: "HT", name: "Haiti" },
-  { code: "VE", name: "Venezuela" },
-  { code: "AF", name: "Afghanistan" },
 ];
+
+export const shippableCountries = countries.filter(
+  (item) => !isRestrictedCountry(item.code),
+);

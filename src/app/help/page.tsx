@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
 import { company } from "@/lib/company";
 import { formatGBP } from "@/lib/format";
+import { embargoCheckoutNames } from "@/lib/embargo";
 import {
   UK_STANDARD_FEE,
   UK_OVERSIZED_FEE,
@@ -32,8 +33,14 @@ export default function HelpPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">Where will you not ship?</h2>
       <p>
-        See <Link href="/restricted-destinations">restricted destinations</Link>. Checkout blocks those countries.
+        We do not ship to the destinations below. They are also blocked in checkout, and they do not appear in the
+        country list. See <Link href="/restricted-destinations">restricted destinations</Link> for the same list.
       </p>
+      <ul className="list-disc space-y-1 pl-5">
+        {embargoCheckoutNames.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
       <h2 className="pt-4 font-serif text-2xl">How long are returns?</h2>
       <p>
         {RETURN_WINDOW_DAYS} days from delivery, with a statutory 14-day right to cancel for most unused goods. Archive
@@ -47,7 +54,7 @@ export default function HelpPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">Who do I email?</h2>
       <p>
-        <a href={`mailto:${company.email}`}>{company.email}</a> or call {company.phoneDisplay}. {company.hours}
+        <a href={`mailto:${company.email}`}>{company.email}</a>. {company.hours}
       </p>
     </PageIntro>
   );

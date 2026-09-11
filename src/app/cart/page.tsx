@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useCart } from "@/lib/cart";
 import { formatGBP } from "@/lib/format";
-import { countries } from "@/lib/countries";
+import { shippableCountries } from "@/lib/countries";
 import { CoverImage } from "@/components/CoverImage";
 
 export default function CartPage() {
@@ -84,7 +84,7 @@ export default function CartPage() {
               value={country}
               onChange={(event) => setCountry(event.target.value)}
             >
-              {countries.map((item) => (
+              {shippableCountries.map((item) => (
                 <option key={item.code} value={item.code}>
                   {item.name}
                 </option>
@@ -119,7 +119,7 @@ export default function CartPage() {
               <p className="mt-6 text-sm">Choose an eligible destination to continue.</p>
             )}
             <p className="mt-3 text-[12px] text-muted">
-              Checkout does not take payment on this storefront preview. You can fill the address form and confirm shipping.
+              Guest checkout takes card payment. No account is required.
             </p>
           </aside>
         </div>

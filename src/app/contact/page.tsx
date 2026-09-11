@@ -11,10 +11,6 @@ export default function ContactPage() {
         {company.legalName}, {company.addressSingle}. {company.hours}
       </p>
       <p className="mt-2">
-        <a className="underline" href={company.phoneHref}>
-          {company.phoneDisplay}
-        </a>
-        {" · "}
         <a className="underline" href={`mailto:${company.email}`}>
           {company.email}
         </a>

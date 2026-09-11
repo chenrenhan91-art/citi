@@ -1,3 +1,5 @@
+import { company } from "./company";
+
 export type Article = {
   slug: string;
   title: string;
@@ -18,7 +20,7 @@ export const articles: Article[] = [
     body: [
       "Flax linen leaves the loom with a firm hand. That is a feature of the fibre, not a fault. If we skipped the wash, the Atlantic bundle would feel like canvas for the first month.",
       "Our mill in northern Portugal washes each metre in water and pumice, then tumble-dries it under control so the slub shows and the colour settles. You can still wash it at home at 40°C. Line drying keeps the hand closer to how it arrived.",
-      "If you need to return bedding, UK distance-selling rules and our 30-day policy both require the set unwashed and in its original packaging. We cannot resell washed sheets. Faulty pieces are a different case: contact studio@dazzleyoureyes.co.uk and we will collect them.",
+      `If you need to return bedding, UK distance-selling rules and our 30-day policy both require the set unwashed and in its original packaging. We cannot resell washed sheets. Faulty pieces are a different case: contact ${company.email} and we will collect them.`,
     ],
   },
   {

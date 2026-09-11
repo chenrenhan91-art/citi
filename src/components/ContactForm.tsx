@@ -37,7 +37,8 @@ export function ContactForm() {
       </button>
       {sent ? (
         <p className="text-sm text-olive">
-          Thanks. This preview does not transmit the message. Please email {company.email} if you need a reply.
+          Thanks. We will reply to the address you entered. If you do not hear back within two working days, write to{" "}
+          {company.email}.
         </p>
       ) : null}
     </form>

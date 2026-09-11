@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
-import { restrictedDestinations } from "@/lib/embargo";
+import { embargoCheckoutNames } from "@/lib/embargo";
 import { company } from "@/lib/company";
 
 export const metadata = {
@@ -15,8 +15,8 @@ export default function RestrictedPage() {
       lede="We follow UK export controls and sanctions. Checkout will refuse these destinations. The list is shown under several common names so it is not missed."
     >
       <ul className="list-disc space-y-2 pl-5">
-        {restrictedDestinations.map((item) => (
-          <li key={item.code}>{item.label}</li>
+        {embargoCheckoutNames.map((name) => (
+          <li key={name}>{name}</li>
         ))}
       </ul>
       <p>

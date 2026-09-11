@@ -20,7 +20,8 @@ export default function AccountPage() {
         </Link>
       </p>
       <p className="pt-6 text-sm text-muted">
-        A signed-in area is not offered on this storefront. Orders are not stored against an account.
+        A signed-in area is not offered. After you pay, your confirmation is shown on screen and kept in this browser
+        session. Orders are not stored against an account.
       </p>
     </PageIntro>
   );

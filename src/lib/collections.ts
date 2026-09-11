@@ -4,6 +4,7 @@ export type Collection = {
   description: string;
   image: string;
   nav?: boolean;
+  listed?: boolean;
 };
 
 export const collections: Collection[] = [
@@ -68,14 +69,14 @@ export const collections: Collection[] = [
     title: "Lighting",
     description: "Paper pendants and ceramic table lamps. Bulbs are sold separately.",
     image: "/images/prod-lantern.jpg",
-    nav: true,
+    listed: false,
   },
   {
     slug: "throws",
     title: "Throws",
     description: "Alpaca and wool blankets for sofas and the end of the bed.",
     image: "/images/prod-alpaca-throw.jpg",
-    nav: true,
+    listed: false,
   },
   {
     slug: "tabletop",
@@ -169,4 +170,12 @@ export const countriesOnHome = [
 
 export function getCollection(slug: string) {
   return collections.find((item) => item.slug === slug);
+}
+
+export function catalogCollections() {
+  return collections.filter((item) => item.listed !== false);
+}
+
+export function navCollections() {
+  return collections.filter((item) => item.nav);
 }

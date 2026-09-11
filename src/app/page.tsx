@@ -136,10 +136,6 @@ export default function HomePage() {
           {company.hours}
         </p>
         <p className="mt-4 text-base">
-          <a className="underline" href={company.phoneHref}>
-            {company.phoneDisplay}
-          </a>
-          <span className="mx-2">·</span>
           <a className="underline" href={`mailto:${company.email}`}>
             {company.email}
           </a>

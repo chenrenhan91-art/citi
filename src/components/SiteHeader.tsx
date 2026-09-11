@@ -10,13 +10,13 @@ import {
   List,
 } from "@phosphor-icons/react";
 import { company } from "@/lib/company";
-import { collections } from "@/lib/collections";
+import { navCollections } from "@/lib/collections";
 import { searchProducts } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { formatGBP } from "@/lib/format";
 import { CoverImage } from "./CoverImage";
 
-const shopLinks = collections.filter((item) => item.nav);
+const shopLinks = navCollections();
 
 export function SiteHeader() {
   const { count, lines, quote } = useCart();
@@ -288,7 +288,8 @@ export function SiteHeader() {
                 )}
               </p>
               <p className="mt-3 text-[12px] text-muted">
-                Guest checkout is available. No account is required. Delivery is estimated for the United Kingdom here; other countries are calculated on the bag page.
+                Guest checkout takes card payment. No account is required. Delivery is estimated for the United Kingdom
+                here; other countries are calculated on the bag page.
               </p>
               <Link href="/cart" className="btn btn-solid mt-4 w-full" onClick={() => setBagOpen(false)}>
                 View bag

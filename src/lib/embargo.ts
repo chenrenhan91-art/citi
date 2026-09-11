@@ -88,3 +88,20 @@ export function isRestrictedCountry(code: string): boolean {
 export function restrictedLabelList(): string {
   return restrictedDestinations.map((item) => item.label).join("; ");
 }
+
+export const embargoCheckoutNames = [
+  "North Korea",
+  "Iran",
+  "Iran (Islamic Republic of)",
+  "Myanmar",
+  "Russia",
+  "Russian Federation",
+  "Syria",
+  "Syrian Arab Republic",
+  "Cuba",
+  "South Sudan",
+  "Yemen",
+  "Haiti",
+  "Venezuela",
+  "Afghanistan",
+] as const;

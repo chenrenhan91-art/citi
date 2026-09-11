@@ -1,20 +1,7 @@
 import Link from "next/link";
 import { company } from "@/lib/company";
 import { NewsletterForm } from "./NewsletterForm";
-
-const shop = [
-  ["Shop All", "/collections/shop-all"],
-  ["Rugs", "/collections/rugs"],
-  ["Bedding and Bath", "/collections/bedding"],
-  ["Pillows", "/collections/pillows"],
-  ["Furniture", "/collections/furniture"],
-  ["Baskets", "/collections/baskets"],
-  ["Lighting", "/collections/lighting"],
-  ["Throws", "/collections/throws"],
-  ["Tabletop", "/collections/tabletop"],
-  ["Best Sellers", "/collections/best-sellers"],
-  ["Archive Sale", "/collections/archive-sale"],
-] as const;
+import { navCollections } from "@/lib/collections";
 
 const about = [
   ["Our Story", "/about"],
@@ -51,7 +38,10 @@ export function SiteFooter() {
             </p>
             <NewsletterForm />
           </div>
-          <FooterCol title="Shop" links={shop} />
+          <FooterCol
+            title="Shop"
+            links={navCollections().map((item) => [item.title, `/collections/${item.slug}`] as const)}
+          />
           <FooterCol title="About" links={about} />
           <div>
             <FooterCol title="Help" links={help} />
@@ -75,10 +65,6 @@ export function SiteFooter() {
             {company.addressSingle}
           </p>
           <p className="mt-2 text-sm">
-            <a href={company.phoneHref} className="hover:text-olive">
-              {company.phoneDisplay}
-            </a>
-            {" · "}
             <a href={`mailto:${company.email}`} className="hover:text-olive">
               {company.email}
             </a>
