@@ -195,7 +195,7 @@ export function SiteHeader() {
                 <X size={22} />
               </button>
             </div>
-            <form action={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/search/`} className="mt-8">
+            <form action="/search/" className="mt-8">
               <label htmlFor="q" className="text-[11px] uppercase tracking-[0.18em] text-muted">
                 Search
               </label>
