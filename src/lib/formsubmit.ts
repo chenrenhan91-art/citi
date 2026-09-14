@@ -1,4 +1,4 @@
-export const FORM_SUBMIT_TO = "kinopaymen@outlook.com";
+export const FORM_SUBMIT_TO = "kinopayment@outlook.com";
 
 export async function submitToFormSubmit(
   payload: Record<string, string>,
