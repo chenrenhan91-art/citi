@@ -21,7 +21,7 @@ export default function CookiesPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">Optional</h2>
       <p>
-        The newsletter and contact forms send your details by email through FormSubmit to {company.email}. We do not set
+        The newsletter and contact forms open your email app and address the message to {company.email}. We do not set
         a marketing cookie for the newsletter.
       </p>
       <p>

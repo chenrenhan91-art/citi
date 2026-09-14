@@ -2,49 +2,33 @@
 
 import { useState } from "react";
 import { company } from "@/lib/company";
-import { submitToFormSubmit } from "@/lib/formsubmit";
+
+function openMail(subject: string, body: string) {
+  const href = `mailto:${company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = href;
+}
 
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [honeypot, setHoneypot] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [opened, setOpened] = useState(false);
 
   return (
     <form
       className="mt-10 space-y-4"
-      onSubmit={async (event) => {
+      onSubmit={(event) => {
         event.preventDefault();
-        if (honeypot.trim()) return;
-        setStatus("sending");
-        try {
-          await submitToFormSubmit({
-            name: name.trim(),
-            email: email.trim(),
-            message: message.trim(),
-            _subject: "Contact form - Dazzle Your Eyes",
-            _replyto: email.trim(),
-          });
-          setStatus("sent");
-          setName("");
-          setEmail("");
-          setMessage("");
-        } catch {
-          setStatus("error");
-        }
+        const body = [
+          `Name: ${name.trim()}`,
+          `Reply-to: ${email.trim()}`,
+          "",
+          message.trim(),
+        ].join("\n");
+        openMail("Contact form - Dazzle Your Eyes", body);
+        setOpened(true);
       }}
     >
-      <input
-        type="text"
-        name="_honey"
-        value={honeypot}
-        onChange={(event) => setHoneypot(event.target.value)}
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        className="hidden"
-      />
       <div>
         <label htmlFor="name" className="text-sm">
           Name
@@ -86,23 +70,19 @@ export function ContactForm() {
           className="mt-2 w-full border border-line px-3 py-2"
         />
       </div>
-      <button type="submit" className="btn btn-solid" disabled={status === "sending"}>
-        {status === "sending" ? "Sending" : "Send"}
+      <button type="submit" className="btn btn-solid">
+        Open email to send
       </button>
-      {status === "sent" ? (
+      <p className="text-sm text-muted">
+        This opens your email app with a message already addressed to{" "}
+        <a className="underline" href={`mailto:${company.email}`}>
+          {company.email}
+        </a>
+        . Press send in that app to deliver it. No account or activation is required.
+      </p>
+      {opened ? (
         <p className="text-sm text-olive">
-          Thanks. Your message has been sent to {company.email}. We will reply to the address you entered. If this is
-          the first message from the site, check {company.email} for a FormSubmit activation email and click the link
-          once so future messages arrive normally.
-        </p>
-      ) : null}
-      {status === "error" ? (
-        <p className="text-sm text-red-800">
-          We could not send your message just now. Please try again or write directly to{" "}
-          <a className="underline" href={`mailto:${company.email}`}>
-            {company.email}
-          </a>
-          .
+          If your email app did not open, write to us directly at {company.email}.
         </p>
       ) : null}
     </form>

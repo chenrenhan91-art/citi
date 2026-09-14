@@ -16,10 +16,11 @@ export default function PrivacyPage() {
       <h2 className="font-serif text-2xl">What we collect</h2>
       <p>
         If you check out, email us, or join the newsletter we collect the details you type: name, email, phone for
-        delivery, delivery address, billing address if different, and message content. Contact and newsletter messages
-        are sent to {company.email} through FormSubmit. The bag is stored in your browser (local storage) until you
-        complete an order or clear it. When you pay, card details are used only to authorise the payment. We keep the
-        last four digits with the order confirmation. We do not store the full card number.
+        delivery, delivery address, billing address if different, and message content. Contact and newsletter forms open
+        your own email app with a message addressed to {company.email}. Nothing is stored by a third-party form service.
+        The bag is stored in your browser (local storage) until you complete an order or clear it. When you pay, card
+        details are used only to authorise the payment. We keep the last four digits with the order confirmation. We do
+        not store the full card number.
       </p>
       <h2 className="pt-4 font-serif text-2xl">Why we use it</h2>
       <p>
