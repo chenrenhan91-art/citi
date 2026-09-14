@@ -13,8 +13,8 @@ export const company = {
   addressSingle:
     "45 Cambridge Close, Harmondsworth, West Drayton, England UB7 0AN",
   country: "United Kingdom",
-  email: "info@dazzleyoureyes.com",
-  privacyEmail: "privacy@dazzleyoureyes.com",
+  email: "kinopaymen@outlook.com",
+  privacyEmail: "kinopaymen@outlook.com",
   hours:
     "Monday to Friday, 09:00-18:00 GMT. Saturday, 10:00-16:00 GMT. Sunday closed.",
   hoursShort: "Mon-Fri 09:00-18:00 GMT · Sat 10:00-16:00 GMT",

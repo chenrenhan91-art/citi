@@ -21,7 +21,8 @@ export default function CookiesPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">Optional</h2>
       <p>
-        The newsletter form keeps your email only in the page until you submit. We do not set a marketing cookie for it.
+        The newsletter and contact forms send your details by email through FormSubmit to {company.email}. We do not set
+        a marketing cookie for the newsletter.
       </p>
       <p>
         Questions: {company.privacyEmail}.
