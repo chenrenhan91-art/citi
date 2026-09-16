@@ -83,7 +83,7 @@ export default function CheckoutSuccessPage() {
 
       <p className="mt-8 text-sm">
         Sold by {company.legalName}, {company.addressSingle}. Questions:{" "}
-        <a className="underline" href={`mailto:${company.email}`}>
+        <a className="underline" href={`mailto:${company.inboxEmail}`}>
           {company.email}
         </a>
         .

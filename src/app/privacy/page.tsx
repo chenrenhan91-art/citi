@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <p>
         If you check out, email us, or join the newsletter we collect the details you type: name, email, phone for
         delivery, delivery address, billing address if different, and message content. Contact and newsletter forms open
-        your own email app with a message addressed to {company.email}. Nothing is stored by a third-party form service.
+        your own email app so you can write to {company.email}. Nothing is stored by a third-party form service.
         The bag is stored in your browser (local storage) until you complete an order or clear it. When you pay, card
         details are used only to authorise the payment. We keep the last four digits with the order confirmation. We do
         not store the full card number.

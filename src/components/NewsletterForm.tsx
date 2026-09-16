@@ -17,7 +17,7 @@ export function NewsletterForm() {
           "Please add this address to the Dazzle Your Eyes newsletter list:",
           email.trim(),
         ].join("\n");
-        const href = `mailto:${company.email}?subject=${encodeURIComponent(
+        const href = `mailto:${company.inboxEmail}?subject=${encodeURIComponent(
           "Newsletter signup - Dazzle Your Eyes",
         )}&body=${encodeURIComponent(body)}`;
         window.location.href = href;
@@ -48,7 +48,7 @@ export function NewsletterForm() {
         </p>
       ) : (
         <p className="mt-2 text-[13px] text-muted">
-          Join opens your email app so the request goes straight to {company.email}. Unsubscribe at any time.
+          Join opens your email app with a request for {company.email}. Unsubscribe at any time.
         </p>
       )}
     </form>

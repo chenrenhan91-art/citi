@@ -21,7 +21,7 @@ export default function RestrictedPage() {
       </ul>
       <p>
         If your address is in one of these places, do not place an order. No carrier we use will accept the shipment.
-        Questions: <a href={`mailto:${company.email}`}>{company.email}</a>. See also{" "}
+        Questions: <a href={`mailto:${company.inboxEmail}`}>{company.email}</a>. See also{" "}
         <Link href="/shipping">Shipping</Link>.
       </p>
     </PageIntro>

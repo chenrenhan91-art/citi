@@ -4,7 +4,7 @@ import { useState } from "react";
 import { company } from "@/lib/company";
 
 function openMail(subject: string, body: string) {
-  const href = `mailto:${company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const href = `mailto:${company.inboxEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = href;
 }
 
@@ -74,15 +74,15 @@ export function ContactForm() {
         Open email to send
       </button>
       <p className="text-sm text-muted">
-        This opens your email app with a message already addressed to{" "}
-        <a className="underline" href={`mailto:${company.email}`}>
+        This opens your email app with a message for{" "}
+        <a className="underline" href={`mailto:${company.inboxEmail}`}>
           {company.email}
         </a>
         . Press send in that app to deliver it. No account or activation is required.
       </p>
       {opened ? (
         <p className="text-sm text-olive">
-          If your email app did not open, write to us directly at {company.email}.
+          If your email app did not open, write to us at {company.email}.
         </p>
       ) : null}
     </form>

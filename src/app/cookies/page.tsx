@@ -21,8 +21,8 @@ export default function CookiesPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">Optional</h2>
       <p>
-        The newsletter and contact forms open your email app and address the message to {company.email}. We do not set
-        a marketing cookie for the newsletter.
+        The newsletter and contact forms open your email app so you can write to {company.email}. We do not set a
+        marketing cookie for the newsletter.
       </p>
       <p>
         Questions: {company.privacyEmail}.

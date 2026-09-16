@@ -54,7 +54,7 @@ export default function HelpPage() {
       </p>
       <h2 className="pt-4 font-serif text-2xl">Who do I email?</h2>
       <p>
-        <a href={`mailto:${company.email}`}>{company.email}</a>. {company.hours}
+        <a href={`mailto:${company.inboxEmail}`}>{company.email}</a>. {company.hours}
       </p>
     </PageIntro>
   );

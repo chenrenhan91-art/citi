@@ -65,7 +65,7 @@ export function SiteFooter() {
             {company.addressSingle}
           </p>
           <p className="mt-2 text-sm">
-            <a href={`mailto:${company.email}`} className="hover:text-olive">
+            <a href={`mailto:${company.inboxEmail}`} className="hover:text-olive">
               {company.email}
             </a>
           </p>

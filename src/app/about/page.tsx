@@ -40,7 +40,7 @@ export default function AboutPage() {
           legal entity behind the site is {company.legalName}, {company.addressSingle}.
         </p>
         <p>
-          Questions: <a href={`mailto:${company.email}`}>{company.email}</a> or{" "}
+          Questions: <a href={`mailto:${company.inboxEmail}`}>{company.email}</a> or{" "}
           <Link href="/contact">contact us</Link>.
         </p>
       </PageIntro>
