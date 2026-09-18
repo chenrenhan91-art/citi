@@ -15,8 +15,8 @@ export const company = {
   country: "United Kingdom",
   email: "support@dazzleyoureyes.com",
   privacyEmail: "support@dazzleyoureyes.com",
-  /** Actual mailbox that receives mailto form submissions. Not shown on the storefront. */
-  inboxEmail: "kinopayment@outlook.com",
+  /** Public support address; Cloudflare Email Routing forwards to goldenflying@vanxpay.com. */
+  inboxEmail: "support@dazzleyoureyes.com",
   hours:
     "Monday to Friday, 09:00-18:00 GMT. Saturday, 10:00-16:00 GMT. Sunday closed.",
   hoursShort: "Mon-Fri 09:00-18:00 GMT · Sat 10:00-16:00 GMT",
