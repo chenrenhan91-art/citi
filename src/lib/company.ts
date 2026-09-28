@@ -13,10 +13,10 @@ export const company = {
   addressSingle:
     "45 Cambridge Close, Harmondsworth, West Drayton, England UB7 0AN",
   country: "United Kingdom",
-  email: "support@dazzleyoureyes.com",
-  privacyEmail: "support@dazzleyoureyes.com",
-  /** Public support address; Cloudflare Email Routing forwards to goldenflying@vanxpay.com. */
-  inboxEmail: "support@dazzleyoureyes.com",
+  email: "service@dazzleyoureyes.com",
+  privacyEmail: "service@dazzleyoureyes.com",
+  /** Public contact address; Cloudflare Email Routing forwards to goldenflying@vanxpay.com. */
+  inboxEmail: "service@dazzleyoureyes.com",
   hours:
     "Monday to Friday, 09:00-18:00 GMT. Saturday, 10:00-16:00 GMT. Sunday closed.",
   hoursShort: "Mon-Fri 09:00-18:00 GMT · Sat 10:00-16:00 GMT",
